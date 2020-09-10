@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personalArea-TS/static/css/main.7333111f.chunk.css",
+    "main.css": "/personalArea-TS/static/css/main.a14a49c8.chunk.css",
     "main.js": "/personalArea-TS/static/js/main.7345c47a.chunk.js",
     "main.js.map": "/personalArea-TS/static/js/main.7345c47a.chunk.js.map",
     "runtime-main.js": "/personalArea-TS/static/js/runtime-main.388f251c.js",
@@ -8,15 +8,15 @@
     "static/js/2.46396fdb.chunk.js": "/personalArea-TS/static/js/2.46396fdb.chunk.js",
     "static/js/2.46396fdb.chunk.js.map": "/personalArea-TS/static/js/2.46396fdb.chunk.js.map",
     "index.html": "/personalArea-TS/index.html",
-    "precache-manifest.feddb21c6e55c64e3e78cd5319d19bf0.js": "/personalArea-TS/precache-manifest.feddb21c6e55c64e3e78cd5319d19bf0.js",
+    "precache-manifest.417877f33c6addc60e9a09fd6d24fca6.js": "/personalArea-TS/precache-manifest.417877f33c6addc60e9a09fd6d24fca6.js",
     "service-worker.js": "/personalArea-TS/service-worker.js",
-    "static/css/main.7333111f.chunk.css.map": "/personalArea-TS/static/css/main.7333111f.chunk.css.map",
+    "static/css/main.a14a49c8.chunk.css.map": "/personalArea-TS/static/css/main.a14a49c8.chunk.css.map",
     "static/js/2.46396fdb.chunk.js.LICENSE.txt": "/personalArea-TS/static/js/2.46396fdb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.388f251c.js",
     "static/js/2.46396fdb.chunk.js",
-    "static/css/main.7333111f.chunk.css",
+    "static/css/main.a14a49c8.chunk.css",
     "static/js/main.7345c47a.chunk.js"
   ]
 }
