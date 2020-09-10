@@ -1,0 +1,10 @@
+.authenticated-app-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.authenticated-app-wrapper__spin {
+    width: 100%;
+}

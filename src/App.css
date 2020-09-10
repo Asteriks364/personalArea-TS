@@ -1,12 +1,8 @@
 @media all {
-	.app__wrapper {
+	.app__content {
 		position: relative;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-	}
-	
-	.app__content {
-		display: block;
 	}
 }

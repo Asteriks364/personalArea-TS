@@ -1,0 +1,20 @@
+@media all {
+	.unauthenticated-app {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		background-color: #f5f5f5;
+	}
+	
+	.unauthenticated-app__header {
+		flex: 0 1 auto;
+		font: bold 60px/71px Rubik, sans-serif;
+		color: #cc491e;
+	}
+	
+	.unauthenticated-app__login-form {
+		flex: 0 1 auto;
+	}
+}
