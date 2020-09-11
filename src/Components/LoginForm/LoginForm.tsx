@@ -1,17 +1,32 @@
 import * as React from 'react';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button, Alert } from 'antd';
+
+import { useAuth } from '../AppProviders/Providers/AuthProvider/AuthProvider';
 
 import './LoginForm.css';
 
 export const LoginForm = (): JSX.Element => {
+  const authContext = useAuth();
+  const { login } = authContext;
+
+  const [errorMessage, setErrorMessage] = React.useState(undefined as string | undefined);
   const [loading, setLoading] = React.useState(false as boolean);
 
-  const onFinish = React.useCallback((values) => {
-    console.log('Success:', values);
-  }, []);
+  const onFinish = React.useCallback(
+    async (values: any) => {
+      setErrorMessage(undefined);
+      setLoading(true);
 
-  const onFinishFailed = React.useCallback((errorInfo) => {
-    console.log('Failed:', errorInfo);
+      if (!(await login(values.userName, values.password))) {
+        setErrorMessage('Неверное имя пользователя или пароль.');
+        setLoading(false);
+      }
+    },
+    [login],
+  );
+
+  const onFinishFailed = React.useCallback(() => {
+    setErrorMessage(undefined);
   }, []);
 
   return (
@@ -26,9 +41,6 @@ export const LoginForm = (): JSX.Element => {
             <Input.Password size="large" placeholder="Пароль" />
           </Form.Item>
         </div>
-        <Form.Item name="remember" valuePropName="checked">
-          <Checkbox>Запоминь меня</Checkbox>
-        </Form.Item>
 
         <Form.Item>
           <Button type="primary" htmlType="submit" size="large" loading={loading}>
@@ -36,6 +48,9 @@ export const LoginForm = (): JSX.Element => {
           </Button>
         </Form.Item>
       </Form>
+      {errorMessage === undefined ? undefined : (
+        <Alert className="login-form__alert" message={errorMessage} type="error" showIcon={true} />
+      )}
     </div>
   );
 };
