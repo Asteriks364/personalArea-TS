@@ -38,8 +38,7 @@ export const AuthenticatedAppWrapper = (): JSX.Element => {
       method: 'get',
       url: fakeDataUrl,
       responseType: 'stream',
-    }).then(function (response) {
-      console.log(response.data);
+    }).then(function (response: { data: any }) {
       callback(response.data);
     });
   };
